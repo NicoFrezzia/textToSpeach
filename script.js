@@ -1,4 +1,4 @@
-const SERVER_URL = "http://localhost:5050"; // Your backend server URL
+const SERVER_URL = "https://texttospeach-btn2.onrender.com"; // Your backend server URL
 
 let voiceSelect = document.querySelector("select");
 
