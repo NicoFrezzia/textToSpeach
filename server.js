@@ -4,7 +4,6 @@ const axios = require("axios");
 const cors = require("cors");
 
 const app = express();
-const PORT = 5050;
 
 app.use(express.json());
 app.use(cors());
@@ -41,4 +40,6 @@ app.post("/speak", async (req, res) => {
     }
 });
 
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+// ✅ FIXED: Ensure PORT is defined
+const PORT = process.env.PORT || 5050;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
